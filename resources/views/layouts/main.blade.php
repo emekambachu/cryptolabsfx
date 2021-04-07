@@ -33,13 +33,7 @@
             <div class="col-xs-12 col-md-9">
                 <div class=top-bar-welcome>
                     <ul>
-                        <li>Welcome to CryptoLabs FX
-                    </ul>
-                </div>
-                <div class=top-bar-info>
-                    <ul>
-                        <li>BTC / USD 9566
-                        <li>BCH / USD 1450
+                        <li id="google_translate_element"></li>
                     </ul>
                 </div>
             </div>
@@ -48,7 +42,6 @@
                     <li><a href=#><i class="fa fa-facebook"></i></a>
                     <li><a href=#><i class="fa fa-twitter"></i></a>
                     <li><a href=#><i class="fa fa-instagram"></i></a>
-                    <li><a href=#><i class="fa fa-pinterest"></i></a>
                 </ul>
             </div>
         </div>
@@ -160,6 +153,14 @@
 <script src="{{ asset('main/js/modernizr.js') }}"></script>
 <script src="{{ asset('main/js/map.js') }}"></script>
 <script src="{{ asset('main/js/main.js') }}"></script>
+
+<script type="text/javascript">
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL}, 'google_translate_element');
+    }
+</script>
+
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 <!--Start of Tawk.to Script-->
 <script type="text/javascript">
