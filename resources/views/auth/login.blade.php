@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('title')
-    Sign up
+    Login
 @endsection
 
 @section('top-assets')
@@ -10,17 +10,17 @@
 
 @section('content')
     <div class="page-title" style="background-image:url({{ asset('main/img/bg/bg5.jpg') }})">
-        <h1>Sign up</h1>
+        <h1>Login</h1>
         <ul>
             <li><a href="{{ url('/') }}">Home</a></li>
-            <li><a href="">Sign up</a></li>
+            <li><a href="">Login</a></li>
         </ul>
     </div>
 
     <div class="section-block">
         <div class="container">
             <div class="center-holder section-heading">
-                <h2>Sign up</h2>
+                <h2>Login</h2>
                 <div class="section-heading-line"></div>
             </div>
 
