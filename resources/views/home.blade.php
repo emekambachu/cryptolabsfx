@@ -148,7 +148,7 @@ Home
                     <div class="fade modal video-modal" role=dialog id=videomodal tabindex=-1>
                         <div class="modal-dialog modal-lg" role=document>
                             <iframe allowfullscreen class="full-width image-shadow round-frame" height=415
-                                    src=https://www.youtube.com/embed/EWzsJG07vHY></iframe>
+                                    src=https://www.youtube.com/embed/Mvrq8hLjcRk></iframe>
                         </div>
                     </div>
                 </div>

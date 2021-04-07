@@ -19,6 +19,8 @@
 
 <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900"rel=stylesheet>
 
+@yield('top-assets')
+
 <div id=preloader>
     <div class="row loader">
         <div class=loader-icon></div>
