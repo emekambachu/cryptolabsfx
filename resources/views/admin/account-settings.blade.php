@@ -29,7 +29,7 @@
                                 @method('PUT')
                                 <div class="form-row">
                                     <div class="col-md-6 mb-3">
-                                        <label for="validationDefault01">Amount</label>
+                                        <label for="validationDefault01">Wallet Address</label>
                                         <input name="address" type="text" class="form-control mb-3"
                                                value="{{ !empty($wallet->address) ? $wallet->address : ''}}"
                                                id="validationDefault01" required="">
