@@ -88,7 +88,6 @@ class InvestmentController extends Controller
             'investment_package_id' => $package->id,
             'user_id' => Auth::user()->id,
             'amount' => $input['amount'],
-            'cryptocurrency' => $input['cryptocurrency'],
             'is_approved' => 0,
         ]);
 
@@ -98,7 +97,6 @@ class InvestmentController extends Controller
             'investment_id' => $investment->invest_id,
             'investment_package' => $investment->investmentPackage->name,
             'amount' => $investment->amount,
-            'cryptocurrency' => $investment->cryptocurrency,
             'status' => $investment->is_approved,
             'name' => Auth::user()->name,
             'email' => Auth::user()->email,
@@ -109,7 +107,7 @@ class InvestmentController extends Controller
             $message->from('support@cryptolabsfx.com', 'Crypto Labs FX');
             $message->to($data['email'], $data['name'])->cc('support@cryptolabsfx.com');
             $message->replyTo('support@cryptolabsfx.com', 'Crypto Labs FX');
-            $message->subject('Your crypto mining has been submitted');
+            $message->subject('Your investment has been submitted');
         });
 
         Session::flash('success', 'Investment Submitted,  your wallet would be funded once payment is approved');

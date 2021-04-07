@@ -164,7 +164,7 @@
 
                     <div class="col-md-12">
                         <div class="center-holder">
-                            <button type="submit">Sign up</button>
+                            <button type="submit" style="background-color: #EEB117;">Sign up</button>
                         </div>
                     </div>
 

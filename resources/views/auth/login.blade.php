@@ -27,9 +27,8 @@
             <div class="mt-40">
                 @include('includes.alerts')
 
-                <form method="POST" action="{{ route('register') }}" enctype="multipart/form-data">
+                <form method="POST" action="{{ route('login') }}" enctype="multipart/form-data">
                     @csrf
-
                     <div class="row">
                         <div class="col-md-6">
                             <!-- Input Field Starts -->
@@ -71,7 +70,8 @@
 
                     <div class="col-md-12">
                         <div class="center-holder">
-                            <button type="submit">Login</button>
+                            <button style="background-color: #EEB117; padding: 5px;"
+                                    type="submit">Login</button>
                         </div>
                     </div>
 

@@ -8,7 +8,7 @@
     <div class="layout-px-spacing">
         <div class="page-header">
             <div class="page-title">
-                <h3 class="text-dark">Mine new cryptocurrency</h3>
+                <h3 class="text-dark">New Investment</h3>
             </div>
         </div>
 
@@ -19,7 +19,7 @@
                     <div class="widget-header">
                         <div class="row">
                             <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                <h4>Mine new cryptocurrency</h4>
+                                <h4>Start New Investment</h4>
                             </div>
                             <p>Update your bitcoin wallet address before payment.</p>
                             @include('includes.alerts')
@@ -31,18 +31,6 @@
                             <div class="form-group mb-3">
                                 <label for="validationDefault01">Amount</label>
                                 <input name="amount" type="number" class="form-control" id="validationDefault01" required="">
-                            </div>
-                            <div class="form-group mb-4">
-                                <label for="validationDefault02">Cryptocurrency</label>
-                                <select name="cryptocurrency" class="form-control" required>
-                                    <option selected>Select cryptocurrency</option>
-                                    <option value="Bitcoin">Bitcoin</option>
-                                    <option value="Ethereum">Ethereum</option>
-                                    <option value="Bitcoin Cash">Bitcoin Cash</option>
-                                    <option value="Litecoin">Litecoin</option>
-                                    <option value="Binance Coin">Binance Coin</option>
-                                    <option value="Ripple">Ripple</option>
-                                </select>
                             </div>
                             <div class="form-group mb-4">
                                 <label for="validationDefault02">Package</label>

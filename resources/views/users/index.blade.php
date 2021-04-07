@@ -82,130 +82,31 @@
         <div class="row layout-top-spacing">
 
             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 layout-spacing">
-                <div style="height:400px; background-color: #FFFFFF; overflow:hidden; box-sizing: border-box; border: 1px solid #56667F; border-radius: 4px; text-align: right; line-height:14px; font-size: 12px; font-feature-settings: normal; text-size-adjust: 100%; box-shadow: inset 0 -20px 0 0 #56667F; padding: 0px; margin: 0px; width: 100%;">
-                    <div style="height:400px; padding:0px; margin:0px; width: 100%;">
-                        <iframe src="https://widget.coinlib.io/widget?type=full_v2&theme=light&cnt=10&pref_coin_id=1505&graph=yes" width="100%" height="400px" scrolling="auto" marginwidth="0" marginheight="0" frameborder="0" border="0" style="border:0;margin:0;padding:0;">
-                        </iframe>
-                    </div>
-                    <div style="color: #FFFFFF; line-height: 14px; font-weight: 400; font-size: 11px; box-sizing: border-box; padding: 2px 6px; width: 100%; font-family: Verdana, Tahoma, Arial, sans-serif;"><a href="https://coinlib.io" target="_blank" style="font-weight: 500; color: #FFFFFF; text-decoration:none; font-size:11px"></a>
-                    </div>
+                <!-- TradingView Widget BEGIN -->
+                <div class="tradingview-widget-container">
+                    <div id="tradingview_fe7fb"></div>
+                    <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/NASDAQ-AAPL/" rel="noopener" target="_blank"></a></div>
+                    <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+                    <script type="text/javascript">
+                        new TradingView.widget(
+                            {
+                                "width": "100%",
+                                "height": 500,
+                                "symbol": "NASDAQ:AAPL",
+                                "interval": "D",
+                                "timezone": "Etc/UTC",
+                                "theme": "dark",
+                                "style": "1",
+                                "locale": "en",
+                                "toolbar_bg": "#f1f3f6",
+                                "enable_publishing": false,
+                                "allow_symbol_change": true,
+                                "container_id": "tradingview_fe7fb"
+                            }
+                        );
+                    </script>
                 </div>
-
-{{--                <script>--}}
-{{--                    // Set the date we're counting down to--}}
-{{--                    var countdowns = [--}}
-{{--                        @foreach($myInvestments as $inv)--}}
-{{--                        {--}}
-{{--                            id: {{ $inv->id }},--}}
-{{--                            date: new Date("{{ date('F d, Y h:i:s', strtotime($inv->updated_at . ' +'.$inv->investmentPackage->days_turnover.' hours')) }}").getTime()--}}
-{{--                        }--}}
-{{--                        @endforeach--}}
-{{--                    ];--}}
-
-{{--                    // Update the count down every 1 second--}}
-{{--                    var timer = setInterval(function() {--}}
-{{--                        // Get todays date and time--}}
-{{--                        var now = Date.now();--}}
-
-{{--                        var index = countdowns.length - 1;--}}
-
-{{--                        // we have to loop backwards since we will be removing--}}
-{{--                        // countdowns when they are finished--}}
-{{--                        while(index >= 0) {--}}
-{{--                            var countdown = countdowns[index];--}}
-
-{{--                            // Find the distance between now and the count down date--}}
-{{--                            var distance = countdown.date - now;--}}
-
-{{--                            // Time calculations for days, hours, minutes and seconds--}}
-{{--                            var days = Math.floor(distance / (1000 * 60 * 60 * 24));--}}
-{{--                            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));--}}
-{{--                            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));--}}
-{{--                            var seconds = Math.floor((distance % (1000 * 60)) / 1000);--}}
-
-{{--                            var timerElement = document.getElementById("demo" + countdown.id);--}}
-
-{{--                            // If the count down is over, write some text--}}
-{{--                            if (distance < 0) {--}}
-{{--                                timerElement.innerHTML = "EXPIRED";--}}
-{{--                                // this timer is done, remove it--}}
-{{--                                countdowns.splice(index, 1);--}}
-{{--                            } else {--}}
-{{--                                timerElement.innerHTML =  hours + "h " + minutes + "m " + seconds + "s ";--}}
-{{--                            }--}}
-{{--                            index -= 1;--}}
-{{--                        }--}}
-
-{{--                        // if all countdowns have finished, stop timer--}}
-{{--                        if (countdowns.length < 1) {--}}
-{{--                            clearInterval(timer);--}}
-{{--                        }--}}
-{{--                    }, 1000);--}}
-{{--                </script>--}}
-
-{{--            @foreach($myInvestments as $inv)--}}
-
-{{--                <script type="text/javascript">--}}
-{{--                    let countDownDate = new Date("{{ date('F d, Y h:i:s', strtotime($inv->updated_at . ' +'.$inv->investmentPackage->days_turnover.' hours')) }}").getTime();--}}
-
-{{--                    // Update the count down every 1 second--}}
-{{--                    let x = setInterval(function() {--}}
-
-{{--                        // Get today's date and time--}}
-{{--                        let now = new Date().getTime();--}}
-
-{{--                        // Find the distance between now and the count down date--}}
-{{--                        let distance = countDownDate - now;--}}
-
-{{--                        // Time calculations for days, hours, minutes and seconds--}}
-{{--                        let days = Math.floor(distance / (1000 * 60 * 60 * 24));--}}
-{{--                        let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));--}}
-{{--                        let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));--}}
-{{--                        let seconds = Math.floor((distance % (1000 * 60)) / 1000);--}}
-
-{{--                        // Output the result in an element with id="demo"--}}
-{{--                        document.getElementById("demo{{ $inv->id }}").innerHTML = days + "d " + hours + "h "--}}
-{{--                            + minutes + "m " + seconds + "s ";--}}
-
-{{--                        // If the count down is over, write some text--}}
-{{--                        if (distance < 0) {--}}
-{{--                            clearInterval(x);--}}
-{{--                            document.getElementById("demo{{ $inv->id }}").innerHTML = "EXPIRED";--}}
-{{--                        }--}}
-{{--                    }, 1000);--}}
-{{--                </script>--}}
-
-{{--                <div class="timerContainer">--}}
-
-{{--                    <p class="miningInfo">--}}
-{{--                        <strong>Mining:</strong> ${{ $inv->amount }}<br>--}}
-{{--                        <strong>Package:</strong> {{ $inv->investmentPackage->name }}<br>--}}
-{{--                        <strong>ROI:</strong> {{ $inv->investmentPackage->roi }}<br>--}}
-{{--                    </p>--}}
-
-{{--                    <p class="timerDisplay" id="demo{{ $inv->id }}"></p>--}}
-
-{{--                </div>--}}
-{{--                @endforeach--}}
-
-{{--                {{ $miningApprovedTime.' < '.$stopMiningTime.' now:'.$now }}--}}
-
-{{--                @if($recentInvestment)--}}
-{{--                    @if(($miningApprovedTime < $stopMiningTime) && ($stopMiningTime > $now))--}}
-{{--                    <div class="center" id="timer">--}}
-{{--                        <span>Countdown to Mining Completion</span>--}}
-{{--                        <div id="days"></div>--}}
-{{--                        <div id="hours"></div>--}}
-{{--                        <div id="minutes"></div>--}}
-{{--                        <div id="seconds"></div>--}}
-{{--                    </div>--}}
-{{--                    @else--}}
-{{--                    <div class="center" id="timer">--}}
-{{--                        <span>Mining completed for {{ $recentInvestment->investmentPackage->name.', '.$recentInvestment->investmentPackage->roi.' ($'.$recentInvestment->amount.')' }}</span>--}}
-{{--                    </div>--}}
-{{--                    @endif--}}
-{{--                @endif--}}
-
+                <!-- TradingView Widget END -->
             </div>
 
             <div class="col-lg-4 col-md-4 col-sm-6 col-12 layout-spacing">
@@ -223,13 +124,13 @@
                                 @if($recentInvestment)
                                 {{ $recentInvestment->investmentPackage->name ?? Null }}
                                 @else
-                                No Current Mining Package<br>
+                                No Current Investment Package<br>
                                 <a href="{{ route('investments.create') }}">
                                     <button class="btn btn-success btn-sm" style="float: left;">Add New</button>
                                 </a>
                                 @endif
                                 </h6>
-                                <p class="">Mining Package</p>
+                                <p class="">Recent Investment Package</p>
                             </div>
                         </div>
 {{--                        <div class="progress">--}}
@@ -388,7 +289,6 @@
                                     <th scope="col">Investment ID</th>
                                     <th scope="col">Package</th>
                                     <th scope="col">Amount</th>
-                                    <th scope="col">Cryptocurrency</th>
                                     <th scope="col">Date</th>
                                     <th scope="col">Status</th>
                                 </tr>
@@ -403,7 +303,6 @@
                                             {{ $invest->investmentPackage->roi ?? '' }}
                                         </td>
                                         <td>${{ number_format($invest->amount) }}</td>
-                                        <td>{{ $invest->cryptocurrency }}</td>
                                         <td>{{ $invest->updated_at->format('j F, Y') }}</td>
                                         <td>
                                             @if($invest->is_approved)
