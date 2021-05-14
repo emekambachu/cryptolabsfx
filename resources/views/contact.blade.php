@@ -26,7 +26,7 @@
                             <div class="col-xs-2"><i class="icon-agenda"></i></div>
                             <div class="col-xs-10">
                                 <h6>Call Us</h6>
-                                <h4>+(123) 456 789</h4>
+                                <h4>+1(917)268‑6494‬</h4>
                             </div>
                         </div>
                     </div>

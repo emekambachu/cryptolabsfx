@@ -93,7 +93,7 @@
                 </div>
                 <div class=footer-contact-list>
                     <ul>
-                        <li><i class="fa fa-phone"></i>+123 456 789</li>
+                        <li><i class="fa fa-phone"></i>+1(917)268‑6494‬</li>
                         <li><i class="fa fa-map"></i>New York, United States</li>
                         <li><i class="fa fa-envelope"></i>info@cryptolabsfx.com</li>
                     </ul>
