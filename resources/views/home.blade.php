@@ -323,94 +323,92 @@ Home
         </div>
     </div>
 
+{{--    <div class=section-block-parallax style=background-image:url({{ asset('main/img/slider/slider-3.jpg') }})>--}}
+{{--        <div class="container">--}}
+{{--            <div class="center-holder section-heading">--}}
+{{--                <h2 style="color: #ffffff;">Investment Packages</h2>--}}
+{{--                <div class="section-heading-line"></div>--}}
+{{--            </div>--}}
+{{--            <div class="row mt-50">--}}
 
+{{--                @foreach($packages as $package)--}}
+{{--                <div class="col-md-3 col-xs-12 col-sm-6">--}}
+{{--                    <div class="fadeIn live-price wow price-dark" data-wow-delay="0s" style="visibility: visible; animation-delay: 0s; animation-name: fadeIn;">--}}
+{{--                        <h3 style="color: #EEB117;">{{ $package->name }}</h3>--}}
+{{--                        <h4>--}}
+{{--                            @if(!empty($package->min))--}}
+{{--                                <p style="font-size: 15px;">Minimum: {{ '$'.number_format($package->min) }}</p>--}}
+{{--                            @endif--}}
 
-    <div class=section-block-parallax style=background-image:url({{ asset('main/img/slider/slider-3.jpg') }})>
-        <div class="container">
-            <div class="center-holder section-heading">
-                <h2 style="color: #ffffff;">Investment Packages</h2>
-                <div class="section-heading-line"></div>
-            </div>
-            <div class="row mt-50">
+{{--                            @if(!empty($package->max))--}}
+{{--                                <p style="font-size: 15px;">Maximum: {{ '$'.number_format($package->max) }}</p>--}}
+{{--                            @else--}}
+{{--                                <p style="font-size: 15px;">and above</p>--}}
+{{--                            @endif--}}
+{{--                        </h4>--}}
+{{--                        <div class="price-divider"></div>--}}
 
-                @foreach($packages as $package)
-                <div class="col-md-3 col-xs-12 col-sm-6">
-                    <div class="fadeIn live-price wow price-dark" data-wow-delay="0s" style="visibility: visible; animation-delay: 0s; animation-name: fadeIn;">
-                        <h3 style="color: #EEB117;">{{ $package->name }}</h3>
-                        <h4>
-                            @if(!empty($package->min))
-                                <p style="font-size: 15px;">Minimum: {{ '$'.number_format($package->min) }}</p>
-                            @endif
+{{--                        @if(!empty($package->roi))--}}
+{{--                        <div class="row">--}}
+{{--                            <div class="col-xs-12">--}}
+{{--                                <strong>{{ $package->roi }}</strong>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                        <div class="price-divider"></div>--}}
+{{--                        @endif--}}
 
-                            @if(!empty($package->max))
-                                <p style="font-size: 15px;">Maximum: {{ '$'.number_format($package->max) }}</p>
-                            @else
-                                <p style="font-size: 15px;">and above</p>
-                            @endif
-                        </h4>
-                        <div class="price-divider"></div>
+{{--                        @if(!empty($package->option1))--}}
+{{--                        <div class="row">--}}
+{{--                            <div class="col-xs-12">--}}
+{{--                                <strong>{{ $package->option1 }}</strong>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                        <div class="price-divider"></div>--}}
+{{--                        @endif--}}
 
-                        @if(!empty($package->roi))
-                        <div class="row">
-                            <div class="col-xs-12">
-                                <strong>{{ $package->roi }}</strong>
-                            </div>
-                        </div>
-                        <div class="price-divider"></div>
-                        @endif
+{{--                        @if(!empty($package->option2))--}}
+{{--                            <div class="row">--}}
+{{--                                <div class="col-xs-12">--}}
+{{--                                    <strong>{{ $package->option2 }}</strong>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                            <div class="price-divider"></div>--}}
+{{--                        @endif--}}
 
-                        @if(!empty($package->option1))
-                        <div class="row">
-                            <div class="col-xs-12">
-                                <strong>{{ $package->option1 }}</strong>
-                            </div>
-                        </div>
-                        <div class="price-divider"></div>
-                        @endif
+{{--                        @if(!empty($package->option3))--}}
+{{--                            <div class="row">--}}
+{{--                                <div class="col-xs-12">--}}
+{{--                                    <strong>{{ $package->option3 }}</strong>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                            <div class="price-divider"></div>--}}
+{{--                        @endif--}}
 
-                        @if(!empty($package->option2))
-                            <div class="row">
-                                <div class="col-xs-12">
-                                    <strong>{{ $package->option2 }}</strong>
-                                </div>
-                            </div>
-                            <div class="price-divider"></div>
-                        @endif
+{{--                        @if(!empty($package->referral_bonus))--}}
+{{--                            <div class="row">--}}
+{{--                                <div class="col-xs-12">--}}
+{{--                                    <strong>{{ $package->referral_bonus }}</strong>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                            <div class="price-divider"></div>--}}
+{{--                        @endif--}}
 
-                        @if(!empty($package->option3))
-                            <div class="row">
-                                <div class="col-xs-12">
-                                    <strong>{{ $package->option3 }}</strong>
-                                </div>
-                            </div>
-                            <div class="price-divider"></div>
-                        @endif
+{{--                        @if(!empty($package->expert_advice))--}}
+{{--                            <div class="row">--}}
+{{--                                <div class="col-xs-12">--}}
+{{--                                    <strong>{{ $package->expert_advice }}</strong>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                            <div class="price-divider"></div>--}}
+{{--                        @endif--}}
+{{--                        <a href="{{ route('register') }}" class="button-md primary-button">Register</a>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                @endforeach--}}
 
-                        @if(!empty($package->referral_bonus))
-                            <div class="row">
-                                <div class="col-xs-12">
-                                    <strong>{{ $package->referral_bonus }}</strong>
-                                </div>
-                            </div>
-                            <div class="price-divider"></div>
-                        @endif
-
-                        @if(!empty($package->expert_advice))
-                            <div class="row">
-                                <div class="col-xs-12">
-                                    <strong>{{ $package->expert_advice }}</strong>
-                                </div>
-                            </div>
-                            <div class="price-divider"></div>
-                        @endif
-                        <a href="{{ route('register') }}" class="button-md primary-button">Register</a>
-                    </div>
-                </div>
-                @endforeach
-
-            </div>
-        </div>
-    </div>
+{{--            </div>--}}
+{{--        </div>--}}
+{{--    </div>--}}
 
     <div class=section-block-parallax style=background-image:url({{ asset('main/img/slider/slider-3.jpg') }})>
         <div class=container>
