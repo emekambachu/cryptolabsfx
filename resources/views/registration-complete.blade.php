@@ -5,26 +5,15 @@
 @endsection
 
 @section('contents')
-    <div class="banner-area" id="banner-area" style="background-image:url({{ asset('header.jpg') }});">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col">
-                    <div class="banner-heading">
-                        <h2 class="banner-title">Registration Complete</h2>
-                        <ol class="breadcrumb">
-                            <li><a href="{{ url('/') }}">Home</a></li>
-                            <li>Registration Complete</li>
-                        </ol>
-                    </div>
-                </div>
-                <!-- Col end-->
-            </div>
-            <!-- Row end-->
-        </div>
-        <!-- Container end-->
+    <div class="page-title" style="background-image:url({{ asset('main/img/bg/bg5.jpg') }})">
+        <h1>Registration Complete</h1>
+        <ul>
+            <li><a href="{{ url('/') }}">Home</a></li>
+            <li><a href="">Registration complete</a></li>
+        </ul>
     </div>
 
-    <section class="main-container" id="main-container">
+    <div class="section-block">
         <!-- container end-->
         <div class="gap-60"></div>
         <div class="ts-form" id="ts-form">
@@ -50,5 +39,5 @@
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 @endsection

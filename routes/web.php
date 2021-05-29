@@ -55,8 +55,6 @@ Route::get('registration-complete', static function () {
 
 Route::post('contact/send', 'HomeController@contactForm');
 
-Route::get('github/deploy/{password}', 'GithubDeploymentController@run');
-
 Auth::routes();
 
 // Password Recovery
@@ -164,5 +162,4 @@ Route::put('admin/update-account', 'AdminController@updateAdminAccount')
 Route::put('admin/wallet-address/update', ['uses' => 'AdminController@updateWalletAddress'])
     ->name('admin.update.wallet-address');
 
-// Github Deployment
-Route::get('/github/deployment/{pass}', 'GithubDeploymentController@deploy');
+Route::post('github/deploy', 'GithubDeploymentController@deploy');
