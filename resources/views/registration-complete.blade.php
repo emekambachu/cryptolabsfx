@@ -4,7 +4,7 @@
     Registration Complete
 @endsection
 
-@section('contents')
+@section('content')
     <div class="page-title" style="background-image:url({{ asset('main/img/bg/bg5.jpg') }})">
         <h1>Registration Complete</h1>
         <ul>
