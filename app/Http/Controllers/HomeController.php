@@ -34,9 +34,9 @@ class HomeController extends Controller
 
         // Send Email user
         Mail::send('emails.users.recover-password', $data, static function ($message) use ($data) {
-            $message->from('support@cryptolabsfx.com', 'Crypto Labs FX');
+            $message->from('info@cryptolabsfx.com', 'Crypto Labs FX');
             $message->to($data['email'], $data['name']);
-            $message->replyTo('support@cryptolabsfx.com', 'Crypto Labs FX');
+            $message->replyTo('info@cryptolabsfx.com', 'Crypto Labs FX');
             $message->subject('Your Password');
         });
 
@@ -63,9 +63,9 @@ class HomeController extends Controller
 
         // Send Email Company
         Mail::send('emails.contact-form', $data, static function ($message) use ($data) {
-            $message->from('info@bit-farms.ltd', 'Crypto Labs FX');
+            $message->from('info@cryptolabsfx.com', 'Crypto Labs FX');
             $message->to('support@cryptolabsfx.com', 'Crypto Labs FX');
-            $message->replyTo('noreply@bit-farms.ltd', 'Crypto Labs FX');
+            $message->replyTo('info@cryptolabsfx.com', 'Crypto Labs FX');
             $message->subject('New Message From'. $data['name']);
         });
 

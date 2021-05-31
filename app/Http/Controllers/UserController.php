@@ -118,9 +118,9 @@ class UserController extends Controller
 
         // Send Email to registered User
         Mail::send('emails.users.withdrawal-request', $data, static function ($message) use ($data) {
-            $message->from('support@cryptolabsfx.com', 'Crypto Labs FX');
+            $message->from('info@cryptolabsfx.com', 'Crypto Labs FX');
             $message->to($data['email'], $data['name'])->cc('support@cryptolabsfx.com');
-            $message->replyTo('support@cryptolabsfx.com', 'Crypto Labs FX');
+            $message->replyTo('info@cryptolabsfx.com', 'Crypto Labs FX');
             $message->subject('Withdrawal request of '.$data['amount']);
         });
 
