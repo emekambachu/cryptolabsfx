@@ -13,11 +13,13 @@ Home
                     <div class=row>
                         <div class=col-md-12>
                             <div class="center-holder slider-content">
-                                <div class=title-block data-swiper-parallax=-900 data-swiper-opacity=0>Welcome to<br>CryptoLabsFX</div>
+                                <div class=title-block data-swiper-parallax=-900 data-swiper-opacity=0>
+                                    Welcome to<br>CryptoLabsFX</div>
                                 <div class=text-block data-swiper-parallax=-800>
                                     <p>Enjoy the best rates from your Cryptocurrency Investments</p>
                                 </div>
-                                <div class=mt-30><a href="{{ url('investment') }}" class="button-md dark-button">Read More</a></div>
+                                <div class=mt-30><a href="{{ url('about') }}" class="button-md dark-button">
+                                        Read More</a></div>
                             </div>
                         </div>
                     </div>
@@ -29,7 +31,8 @@ Home
                     <div class=row>
                         <div class=col-md-12>
                             <div class=slider-content>
-                                <div class=pre-title-block data-swiper-parallax=-1500>Leaders of the cryptocurrency investment platform</div>
+                                <div class=pre-title-block data-swiper-parallax=-1500>
+                                    Leaders of the cryptocurrency investment platform</div>
                                 <div class=title-block data-swiper-parallax=-900 data-swiper-opacity=0>CRYPTOLABSfx</div>
                                 <div class=text-block data-swiper-parallax=-800>
                                     <p>You have ideas, goals, and dreams. We have a culturally diverse, forward thinking team looking to manage your investment portfolio</p>
